@@ -37,6 +37,7 @@
     },
     "plugins": [
       [
+        
         "expo-build-properties",
         {
           "android": {
@@ -48,7 +49,18 @@
             "useFrameworks": "static"
           }
         }
-      ]
+      ],
+      "expo-widget",
+        {
+          "widgets": [
+            {
+              "name": "TaskWidget",
+              "iosTarget": "TaskifyWidget",
+              "androidTarget": "TaskifyWidget",
+              "deploymentTarget": "13.0"
+            }
+          ]
+        }
     ],
     "runtimeVersion": {
       "policy": "appVersion"

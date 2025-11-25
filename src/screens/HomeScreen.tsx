@@ -18,7 +18,6 @@ import { Task } from '../types';
 import { DraggableTaskList } from '../components/tasks/DraggableTaskList';
 import { useSettingsStore } from '../store/useSettingsStore';
 import { EnhancedTaskForm } from '../components/tasks/EnhancedTaskForm';
-import { HomeWidget } from '../widgets/HomeWidget';
 import { useTaskStore } from '../store/useTaskStore';
 import { TestTaskForm } from '../components/tasks/TestTaskForm';
 
@@ -404,15 +403,6 @@ export const HomeScreen: React.FC = () => {
           >
             <MaterialCommunityIcons name="plus" size={24} color="#FFFFFF" />
           </TouchableOpacity>
-        </View>
-
-        {/* Widget Preview */}
-        <View style={[styles.widgetContainer, { backgroundColor: colors.surface, borderColor: colors.border }]}>
-          <HomeWidget 
-            tasks={tasks}
-            onToggleTask={handleToggleTask}
-            onOpenApp={handleOpenApp}
-          />
         </View>
 
         {/* Filter Bar */}
